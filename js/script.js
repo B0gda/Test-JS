@@ -25,7 +25,7 @@ var name = 'Ivan';
 console.log(result); */
 
 
-let number = 4.6;
+/* let number = 4.6;
 console.log(-4/0); //-infinity
 console.log('stric'*3) ;//nan
 const persone = `Alex {number}`;
@@ -45,7 +45,7 @@ let arr = ["appe", "orange.jpg" , 6];
 for(let i=0; i< arr.length;i++){
     console.log(arr[i]);
 }
-
+ */
 //Общение с пользователем
 
 //alert("Hello");
@@ -63,3 +63,8 @@ answers[0] = prompt("LOL?)", 'Nein');
 
 //document.write(answers);
 console.log(typeof(null));  
+
+const category = 'toys';
+const user = 'Ivan';
+console.log(`Hello ${user} ghj`);
+console.log(4 + 'Ivan');

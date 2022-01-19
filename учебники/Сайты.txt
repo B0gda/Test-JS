@@ -1,3 +1,0 @@
-caniuse.com - проверка, можно ли использовать ту или иную часть кода js
-https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table - приоритет операторов
-https://learn.javascript.ru/bitwise-operators - побитовые операторы

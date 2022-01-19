@@ -1,9 +1,11 @@
 "use strict";
+//training
+
+
 /* let number = 5;
 const leftBorderWidth = 1;
 number = 10;
 console.log(number);
-
 
 const obj = {
     a:50
@@ -11,10 +13,9 @@ const obj = {
 
 obj.a = 10;
 
-console.log(obj); */
+console.log(obj); 
 
-
-/* console.log(name);
+ console.log(name);
 var name = 'Ivan';
 
 
@@ -22,10 +23,10 @@ var name = 'Ivan';
     var result = 50;
 }
 
-console.log(result); */
+console.log(result); 
 
 
-/* let number = 4.6;
+ let number = 4.6;
 console.log(-4/0); //-infinity
 console.log('stric'*3) ;//nan
 const persone = `Alex {number}`;
@@ -38,33 +39,53 @@ const obj ={
 isMarried :false
 };
 
-//console.log(obj["age"]);
+console.log(obj["age"]);
 console.log(obj.age);
-
 let arr = ["appe", "orange.jpg" , 6];
 for(let i=0; i< arr.length;i++){
     console.log(arr[i]);
-}
- */
-//Общение с пользователем
+} */
 
-//alert("Hello");
-//const result = confirm("Lol?)");
-//console.log(result);
-/* 
+
+
+/* Общение с пользователем
+
+alert("Hello");
+const result = confirm("Lol?)");
+console.log(result);
+ 
 const answer = +prompt("Вам есть 18?", "18");
 console.log(answer + 5);
-console.log(typeof(answer));  */
+console.log(typeof(answer));  
 
-const answers = [];
+ const answers = [];
 answers[0] = prompt("How are you?", 'OK');
 answers[1] = prompt("Sername?", 'Borov');
 answers[0] = prompt("LOL?)", 'Nein');
 
-//document.write(answers);
+document.write(answers);
 console.log(typeof(null));  
 
 const category = 'toys';
 const user = 'Ivan';
 console.log(`Hello ${user} ghj`);
-console.log(4 + 'Ivan');
+console.log(4 + 'Ivan');  */
+
+
+//!!!!!
+//Первое задание
+//!!!!!!!
+
+/* let numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?");//не знаем, будет ли изменяться - лучше const
+
+const personalMovieDB = {
+count: numberOfFilms,
+movies:{},
+actors:{},
+genres:[],
+privat:false
+};
+const firstQuestion = prompt("Один из последних просмотренных фильмов?");
+const secondQuestion = +prompt("На сколько оцените его?");
+personalMovieDB.movies[firstQuestion] = secondQuestion;
+console.log(personalMovieDB); */

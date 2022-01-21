@@ -290,7 +290,7 @@ console.log(parseFloat(test)); */
 //Третье задание
 //!!!!!!!
 
-let numberOfFilms;
+/* let numberOfFilms;
 
 function start(){
     while(numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)){
@@ -351,11 +351,34 @@ function writeYourGenres(){
         while(a =='' || a == null );
         
         //pert.genres++;
-        personalMovieDB.genres[i-1] = a;
+        personalMovieDB.genres[i-1] = prompt(`Ваш любимый жанр под номером ${i}`); //или можно сразу
     }
 }
 /* start();
 rememberMyFilms();
-detectPersonalLevel(); */
+/* detectPersonalLevel(); 
 writeYourGenres(personalMovieDB);
-console.log(personalMovieDB);
+console.log(personalMovieDB);  */
+
+//call back function
+
+function first( ) {
+    //do something
+    setTimeout(function() {
+        console.log(1);
+    },500);
+}
+function second () {
+    console.log(2);
+}
+first();
+second();
+
+function learnJs(lang, callback) {
+    console.log(` я учу ${lang}`);
+    callback();
+}
+
+learnJs('JavaScript' , function(){
+console.log("YUUUU");
+});

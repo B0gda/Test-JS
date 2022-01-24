@@ -362,7 +362,7 @@ console.log(personalMovieDB);  */
 
 //call back function
 
-function first( ) {
+/* function first( ) {
     //do something
     setTimeout(function() {
         console.log(1);
@@ -381,4 +381,190 @@ function learnJs(lang, callback) {
 
 learnJs('JavaScript' , function(){
 console.log("YUUUU");
+}); */
+
+
+//Objects
+
+/* const obj = new Object(); // запись устарела
+
+const options = {
+name: 'test',
+width: 1024,
+height: 1024,
+colors: {
+    border: 'black',
+    bg: 'red'
+},
+makeTest : function () {
+    console.log('Test!!');
+}
+};
+options.makeTest();
+console.log(Object.keys(options).length);
+
+//Деструктиризация
+const{border,bg} = options.colors;
+console.log(border);
+
+
+
+
+
+//console.log(options['colors']['border']);
+//delete options.name;
+//console.log(options); 
+let counter = 0;
+
+for (let key in options) {
+    if( typeof(options[key]) === 'object'){
+        counter++;
+        for (let i in options[key]){
+        console.log(`Свойство ${i} имеет значение ${options[key][i]}`);
+       
+    }
+    }else{
+console.log(` Свойство ${key} имеет значение ${options[key]}`);
+counter++;
+}
+}
+
+console.log(counter);
+
+
+var codes = {
+    // телефонные коды в формате "код страны": "название"
+    "7": "Россия",
+    "38": "Украина",
+    "1": "США"
+  };
+  
+  for (let code in codes) console.log( code, codes[code] ); // 1, 7, 38
+
+
+  var codes = {
+    "+7": "Россия",
+    "+38": "Украина",
+    "+1": "США"
+  };
+  
+  for (var code in codes) {
+    var value = codes[code];
+    code = +code; // ..если нам нужно именно число, преобразуем: "+7" -> 7
+  
+    console.log( code + ": " + value ); // 7, 38, 1 во всех браузерах
+  } */
+
+
+  //Массивы и псевдомассивы
+
+/* const arr = [100, 2, -32, 6, -8];
+arr.sort(compareNum);
+console.log(arr);
+
+function compareNum(a,b){
+    return a - b;
+}
+
+arr.forEach(function (item, i , arr) {
+console.log(`${i}: ${item} внутри массива ${arr}`);
 });
+/* arr[99] = 0;//error
+arr.pop();
+console.log(arr);
+arr.push(69); 
+console.log(arr);
+
+for(let i = 0; i<arr.length; i++){
+    console.log(arr[i]);
+}
+
+for(let value of arr){
+    console.log(value);
+}
+
+const str = prompt('',"");
+const products = str.split(", ");
+
+console.log(products.join('; ')); */
+
+
+
+//Передача данных по ссылке и по значению
+
+
+
+/* let a =5,
+b = a;
+
+b = b+5;
+console.log(b,a);
+
+
+const obj = {
+    a: 5,
+    b: 1
+};
+
+//const copy = obj;//ссылка на существующий обьект obj
+
+//copy.a = 10;
+//console.log(copy);
+console.log(obj);
+
+function copy(main) {
+let objCopy = {};
+for (let key in main){
+    objCopy[key] = main[key];
+}
+return objCopy;
+}
+
+const numbers = {
+    a: 2,
+    b: 5,
+    c: {
+        x: 7,
+        y: 4
+    }
+};
+
+const newNumbers = copy(numbers);
+newNumbers.a = 10;
+newNumbers.c.x=10;
+console.log(newNumbers);
+console.log(numbers);
+
+const add = {
+d: 17,
+e:20
+};
+
+ const clone =(Object.assign(numbers,add));
+
+clone.d =25;
+clone.c.x =25;
+console.log(clone); 
+
+const oldArray = ['a' , 'b', 'c'];
+const newArray = oldArray.slice();
+newArray[2] = 'efsfsef';
+console.log(newArray);
+console.log(oldArray);
+
+const video = ['youtube', 'vimeo', 'rutube'],
+blogs = ['wordpress', 'livejournal', 'blogger'],
+internet = [...video,...blogs, 'vk'],
+internet2 = [video, blogs];
+
+console.log(internet2);
+
+function log(a, b, c){
+    console.log(a,b,c);
+}
+const numer = [2, 5, 7];
+log(...numer);
+
+const newObj2 = {...add};
+console.log(newObj2);*/
+

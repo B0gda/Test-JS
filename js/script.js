@@ -568,3 +568,133 @@ log(...numer);
 const newObj2 = {...add};
 console.log(newObj2);*/
 
+//ООП. Прототипно-ориентированное программирвание
+
+
+/* let str = 'some';
+let strObj = new String(str);
+
+console.log(typeof(str));
+console.log(typeof(strObj));
+
+console.dir([1, 2, 3]);
+//Prototypes
+const soldier = {
+    health:400,
+    armor:100,
+    x: {
+        d:35
+    }
+};
+const john ={
+    health:100,
+
+};
+//john.__proto__ = soldier;//старый способ прототипирования
+const clone = Object.
+create(Object.getPrototypeOf(soldier),
+ Object.getOwnPropertyDescriptor(soldier));
+
+ console.log(soldier);
+ console.log(clone.x);
+
+
+Object.setPrototypeOf(john, soldier);
+
+
+const john2 = Object.create(soldier);//создаем обьект который будет прототипно наследоваться от солдата
+console.log(john2.armor); */
+
+
+
+
+
+
+//!!!!!
+//Четвертое задание
+//!!!!!!!
+
+const personalMovieDB = {
+    count: 0,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: true,
+    start: function (){
+        
+        while(personalMovieDB.count == '' || personalMovieDB.count == null || isNaN(personalMovieDB.count)){
+            personalMovieDB.count = +prompt('Сколько фильмов вы уже посмотрели?', '');
+        }
+    },
+    rememberMyFilms: function(){
+        for (let i = 0; i < 2; i++) {
+            const a = prompt('Один из последних просмотренных фильмов?', ''),
+                  b = prompt('На сколько оцените его?', '');
+        
+            if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+                personalMovieDB.movies[a] = b;
+                console.log('done');
+            } else {
+                console.log('error');
+                i--;
+            }
+        }
+    },
+    detectPersonalLevel: function(){
+        if (personalMovieDB.count < 10) {
+            console.log("Просмотрено довольно мало фильмов");
+        } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+            console.log("Вы классический зритель");
+        } else if (personalMovieDB.count >= 30) {
+            console.log("Вы киноман");
+        } else {
+            console.log("Произошла ошибка");
+        }
+    },
+    showMyDB: function (priva) {
+        if (priva){console.log(personalMovieDB);  console.log('all works - it is true');}
+        else {console.log('all works - it is false');}
+    
+    },
+    writeYourGenres: function(){
+        for(let i = 1; i < 2; i++){
+            /* let a;
+            do
+            {
+                 a = prompt(`Ваш любимый жанр под номером ${i}`);
+                 if( a === '' || a == null) {console.log("Вы ввели некорректные данные или не ввли вовсе");}
+                }
+            while(a =='' || a == null );
+            
+            //personalMovieDB.genres[i-1] = prompt(`Ваш любимый жанр под номером ${i}`); //или можно сразу
+            personalMovieDB.genres[i-1] = a; */
+            let genre = prompt(`Введите ваши любимые жанры через запятую`).toLowerCase();
+            if( genre === '' || genre == null) 
+            {console.log("Вы ввели некорректные данные или не ввли вовсе");
+             i--;}
+            else{
+                personalMovieDB.genres = genre.split(', ');
+                personalMovieDB.genres.sort();
+            }
+        }
+        personalMovieDB.genres.forEach(function(item, i)
+         {console.log(`Любимый жанр ${i+1} - это ${item}`);});
+    },
+    toggleVisibleMyDB: function(){
+       if(personalMovieDB.privat){
+           personalMovieDB.privat = false;
+       }
+       else{
+           personalMovieDB.privat = true;
+       }
+}
+};
+
+
+personalMovieDB.toggleVisibleMyDB();
+personalMovieDB.showMyDB(personalMovieDB.privat);
+
+personalMovieDB.writeYourGenres();
+
+
+

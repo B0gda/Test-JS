@@ -1,4 +1,7 @@
 "use strict";
+
+//const { type } = require("express/lib/response");
+
 //training
 
 
@@ -614,7 +617,7 @@ console.log(john2.armor); */
 //Четвертое задание
 //!!!!!!!
 
-const personalMovieDB = {
+/* const personalMovieDB = {
     count: 0,
     movies: {},
     actors: {},
@@ -658,7 +661,7 @@ const personalMovieDB = {
     },
     writeYourGenres: function(){
         for(let i = 1; i < 2; i++){
-            /* let a;
+            let a;
             do
             {
                  a = prompt(`Ваш любимый жанр под номером ${i}`);
@@ -667,7 +670,7 @@ const personalMovieDB = {
             while(a =='' || a == null );
             
             //personalMovieDB.genres[i-1] = prompt(`Ваш любимый жанр под номером ${i}`); //или можно сразу
-            personalMovieDB.genres[i-1] = a; */
+            personalMovieDB.genres[i-1] = a; 
             let genre = prompt(`Введите ваши любимые жанры через запятую`).toLowerCase();
             if( genre === '' || genre == null) 
             {console.log("Вы ввели некорректные данные или не ввли вовсе");
@@ -690,11 +693,43 @@ const personalMovieDB = {
 }
 };
 
-
 personalMovieDB.toggleVisibleMyDB();
 personalMovieDB.showMyDB(personalMovieDB.privat);
-
 personalMovieDB.writeYourGenres();
 
 
 
+ */
+
+
+
+
+//
+/* Динамическая типизация */
+//
+
+console.log((String(null)));
+
+const num = 5;
+console.log("http://vk.com/catslog/" + num);
+
+const fontSize = 26 + 'px';
+
+
+console.log(typeof(Number('4')));
+
+console.log(+'5');
+
+console.log((parseFloat('15px, 10')));
+
+function rr () {let answ = +prompt('Hello');}
+rr();
+
+let switcher = null;
+if (switcher){
+    console.log('Working...');
+}
+switcher = 1;
+if (switcher){
+    console.log('Working...');
+}

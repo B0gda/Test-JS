@@ -708,7 +708,7 @@ personalMovieDB.writeYourGenres();
 /* Динамическая типизация */
 //
 
-console.log((String(null)));
+/* console.log((String(null)));
 
 const num = 5;
 console.log("http://vk.com/catslog/" + num);
@@ -733,3 +733,6 @@ switcher = 1;
 if (switcher){
     console.log('Working...');
 }
+
+console.log(typeof(!!"rty4")); */
+

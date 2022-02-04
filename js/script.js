@@ -574,15 +574,18 @@ console.log(newObj2);*/
 //ООП. Прототипно-ориентированное программирвание
 
 
-/* let str = 'some';
+/*  let str = 'some';
 let strObj = new String(str);
 
 console.log(typeof(str));
 console.log(typeof(strObj));
 
-console.dir([1, 2, 3]);
+console.dir([1, 2, 3]); */
+
+
+
 //Prototypes
-const soldier = {
+/* const soldier = {
     health:400,
     armor:100,
     x: {
@@ -594,8 +597,7 @@ const john ={
 
 };
 //john.__proto__ = soldier;//старый способ прототипирования
-const clone = Object.
-create(Object.getPrototypeOf(soldier),
+const clone = Object.create((soldier),
  Object.getOwnPropertyDescriptor(soldier));
 
  console.log(soldier);
@@ -606,7 +608,7 @@ Object.setPrototypeOf(john, soldier);
 
 
 const john2 = Object.create(soldier);//создаем обьект который будет прототипно наследоваться от солдата
-console.log(john2.armor); */
+console.log(john2.armor);  */
 
 
 
@@ -735,4 +737,72 @@ if (switcher){
 }
 
 console.log(typeof(!!"rty4")); */
+
+/*
+const box = document.getElementById('box');
+
+const btns = document.getElementsByTagName('button');
+
+const circles = document.getElementsByClassName('circle');
+
+
+
+//hearts.forEach(item => console.log(item));
+
+const oneheart = document.querySelector('.heart')[0];
+const wrapper = document.querySelector('.wrapper');
+const hearts = wrapper.querySelectorAll('.heart');
+
+box.style.backgroundColor = 'blue';
+box.style.width = '500px'; 
+
+box.style.cssText = 'background-color: blue; width: 500px';
+btns[1].style.borderRadius = '100%';
+circles[0].style.backgroundColor = 'red';
+
+for (let i = 0; i < hearts.length; i++){
+    hearts[i].style.backgroundColor = 'green';
+} 
+
+hearts.forEach(item => {
+item.style.width = '200px';
+});
+
+const div = document.createElement('div');
+//const text = document.createTextNode('Тут был я');
+
+div.classList.add('black');
+
+//document.body.append(div); вставка в конец body
+//document.querySelector('.wrapper').append(div);
+wrapper.append(div);
+
+//wrapper.prepend(div);
+//hearts[0].after(div);
+
+//circles[0].remove();
+
+//hearts[0].replaceWith(circles[0]);
+
+
+//OLD commands
+//wrapper.appendChild(div);
+//wrapper.insertBefore(div, hearts[0]);
+//wrapper.removeChild(hearts[1]);
+//wrapper.replaceChild(circles[0], hearts[2]);
+
+//text HTML
+//div.innerHTML = 'Hello World'; 
+div.innerHTML = " <h1>Hello World</h1><p>bla bla bla bla bla(4)</p>";
+//div.textContent = 'hel';
+div.insertAdjacentHTML('afterbegin', "<h2>Hello</h2>"); */
+
+
+
+
+//!!!!!
+//Пятое задание - в ветке filmPage
+//!!!!!!!
+
+
 

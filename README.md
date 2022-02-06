@@ -1,7 +1,7 @@
 # Test-JS
 Test-JS is the place where the functionality of the JavaScript language is tested.
 ## Installation
-Use Git or checkout with SVN using [the web URL](https://github.com/B0gda/Test-JS.git).
+Use Git or checkout with SVN using the web URL.
 ```git
 git clone https://github.com/B0gda/Test-JS.git
 ```

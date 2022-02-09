@@ -804,5 +804,69 @@ div.insertAdjacentHTML('afterbegin', "<h2>Hello</h2>"); */
 //Пятое задание - в ветке filmPage
 //!!!!!!!
 
+//События
+
+/* const btns = document.querySelectorAll('button'),
+overlay = document.querySelector('.overlay');
+
+//btn.onclick = function() {};
 
 
+//btn.addEventListener('click', () =>{}); 
+
+let i = 0;
+const deleteElement = (e) =>{
+    console.log(e.target);
+    //e.target.remove();
+    console.log('hover_delete');
+    i++;
+    if(i ==1){
+        btn.removeEventListener('click', deleteElement );
+    }
+};
+const deleteElement2 = (e) =>{
+    console.log(e.currentTarget);
+    //e.target.remove();
+    console.log(e.type);
+   
+};
+//btn.addEventListener('click', deleteElement2 );
+//overlay.addEventListener('click', deleteElement2 );
+
+const link = document.querySelector('a');
+link.addEventListener('click', (e) =>{
+    e.preventDefault();
+    console.log(e.target);
+});
+
+btns.forEach(btn => {
+btn.addEventListener('click', deleteElement2, {once: true});
+}); */
+
+
+
+//navigation DOM
+
+//console.log(document.head);
+//console.log(document.documentElement);
+/* console.log(document.body.childNodes);
+console.log(document.body.firstChild);
+console.log(document.body.lastChild);
+
+console.log(document.querySelector('#current').parentElement);
+console.log(document.querySelector('[data-current="3"]').nextElementSibling);
+
+for(let node of document.body.childNodes){
+    if(node.nodeName == "#text"){
+        continue;
+    }
+    console.log(node);
+} */
+
+
+
+//События на мобильном устройстве
+
+window.addEventListener('DOMContentLoaded', () => {
+    
+});

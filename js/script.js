@@ -867,7 +867,7 @@ for(let node of document.body.childNodes){
 
 //События на мобильном устройстве
 
-window.addEventListener('DOMContentLoaded', () => {
+/* window.addEventListener('DOMContentLoaded', () => {
     const box = document.querySelector('.box');
     box.addEventListener('touchstart', (e) => {
         e.preventDefault();
@@ -882,4 +882,4 @@ window.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         console.log('end');
     });
-});
+}); */

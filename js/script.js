@@ -889,7 +889,7 @@ for(let node of document.body.childNodes){
 
 //Время выполнения скриптов(setTimeout и setInterval)
 
-// const timerId = setTimeout(function(text){
+/* // const timerId = setTimeout(function(text){
 //     console.log(text);
 // }, 2000, 'Hello');
 
@@ -933,4 +933,10 @@ function myAnimation() {
         }
     }
 }
-btn.addEventListener('click', myAnimation);
+btn.addEventListener('click', myAnimation); */
+
+
+//экземпляры обьекта DATE
+
+const now = new Date(2020, 5, 1, 20);
+console.log(now);

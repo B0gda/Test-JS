@@ -938,5 +938,20 @@ btn.addEventListener('click', myAnimation); */
 
 //экземпляры обьекта DATE
 
-const now = new Date(2020, 5, 1, 20);
-console.log(now);
+// const now = new Date(2020, 5, 1, 20);
+// console.log(now);
+
+
+//Параметры документа и окна
+
+const box = document.querySelector('.box'),
+btn = document.querySelector('button');
+// const width = box.clientWidth;
+// const height = box.clientHeight;
+// const width = box.offsetWidth;
+// const height = box.offsetHeight;
+// const width = box.scrollWidth;
+// const height = box.scrollHeight;
+btn.addEventListener('click', () => {
+    box.style.height = box.scrollHeight + 'px';
+});

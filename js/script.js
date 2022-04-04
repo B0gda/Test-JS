@@ -47,7 +47,7 @@ window.addEventListener('DOMContentLoaded', () => {
             minutes = Math.floor((t / (1000 * 60)) % 60),
             seconds = Math.floor((t / (1000)) % 60);
         return {
-            t,days,hours,minutes,seconds
+            t, days, hours, minutes, seconds
             //или
             // 'total': t,
             // 'days': days,
@@ -60,7 +60,7 @@ window.addEventListener('DOMContentLoaded', () => {
     function getZero(num) {
         if (num >= 0 && num < 10) {
             return `0${num}`;
-        }else {return num;}
+        } else { return num; }
     }
     function setClock(selector, endtime) {
         const timer = document.querySelector(selector),
@@ -84,4 +84,68 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
     setClock('.timer', deadline);
+
+
+    //Modal-window
+
+    const modalTrigger = document.querySelectorAll('[data-modal]'),
+        modal = document.querySelector('.modal'),
+        modalCloseBtn = document.querySelector('[data-close]');
+
+    //  modalTrigger.addEventListener('click', () => {
+    //      modal.classList.add('show');
+    //      modal.classList.remove('hide');
+    //      document.body.style.overflow = 'hidden'; //не позволяет прокручивать страницу
+    //  });
+
+    //  modalCloseBtn.addEventListener('click', () => {
+    //     modal.classList.add('hide');
+    //     modal.classList.remove('show');
+    //     document.body.style.overflow = ''; //разрешаем прокрутку
+    // });
+    //или
+
+    function closeModal() {
+        modal.classList.toggle('show');
+        document.body.style.overflow = '';
+    }
+    function openModal() {
+        // modal.classList.toggle('show');
+        modal.classList.add('show');
+        modal.classList.remove('hide');
+        document.body.style.overflow = 'hidden'; //не позволяет прокручивать страницу
+        clearInterval(modalTimerId);
+    }
+    modalTrigger.forEach(btn => {
+        btn.addEventListener('click', openModal);
+    });
+    modalCloseBtn.addEventListener('click', () => {
+        closeModal();//разрешаем прокрутку
+    });
+
+    //закрытие по нажатию вне модалки
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    //нажатие Esc для выхода
+    document.addEventListener('keydown', (e) => {
+        if (e.code === "Escape" && modal.classList.contains('show')) {
+            closeModal();
+        }
+    });
+
+    const modalTimerId = setTimeout(openModal, 15000);
+
+    function showModalByScroll() {
+        if (window.pageYOffset + document.documentElement.clientHeight
+            >= document.documentElement.scrollHeight) { //если не работает то document.documentElement.scrollHeight - 1 напиши
+            openModal();
+            window.removeEventListener('scroll',showModalByScroll);
+        }
+    }
+    window.addEventListener('scroll',showModalByScroll); //{once:true} не поможет
+
 });

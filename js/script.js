@@ -943,7 +943,7 @@ btn.addEventListener('click', myAnimation); */
 
 
 //Параметры документа и окна
-
+/*
 const box = document.querySelector('.box'),
 btn = document.querySelector('button');
 // const width = box.clientWidth;
@@ -956,4 +956,40 @@ btn.addEventListener('click', () => {
     // box.style.height = box.scrollHeight + 'px';
     console.log(box.scrollTop);
 });
-const style = window.getComputedStyle(box);
+const style = window.getComputedStyle(box);*/
+
+//Функции-конструкторы
+
+const num = new Function(3);
+console.log(num);
+
+function user(name, id){
+    this.name = name;
+    this.id = id;
+    this.human = true;
+    this.hello = function() {
+        console.log(`Hello ${this.name}`);
+    };
+}
+
+user.prototype.exit = function(){
+    console.log(`Goodbuy ${this.name}`);
+};
+const ivan = new user('Ivan', 26, false);
+console.log(ivan);
+ivan.hello();
+ivan.exit();
+
+class User2 {
+    constructor(name,id){
+        this.name = name;
+        this.id = id;
+        this.human = true;
+    }
+    hello(){
+        console.log(`Hello ${this.name}`);
+    }
+    exit() {
+        console.log(`Goodbuy ${this.name}`);
+    }
+}

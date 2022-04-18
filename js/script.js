@@ -194,7 +194,7 @@ do{
        }
 personalMovieDB.movies[firstQuestion] = secondQuestion;
 console.log(personalMovieDB); */
- 
+
 
 
 
@@ -257,7 +257,7 @@ logger();
 
 const call2 = (a,b) => a+b;
 console.log(call2(2,3)); */
- 
+
 
 //Методы и свойства у строк и чисел
 
@@ -459,7 +459,7 @@ var codes = {
   } */
 
 
-  //Массивы и псевдомассивы
+//Массивы и псевдомассивы
 
 /* const arr = [100, 2, -32, 6, -8];
 arr.sort(compareNum);
@@ -960,7 +960,7 @@ const style = window.getComputedStyle(box);*/
 
 //Функции-конструкторы
 
-const num = new Function(3);
+/* const num = new Function(3);
 console.log(num);
 
 function user(name, id){
@@ -992,4 +992,95 @@ class User2 {
     exit() {
         console.log(`Goodbuy ${this.name}`);
     }
+} */
+/* 
+//Контекст вызова. This
+// function showThis(a,b){
+//     console.log(this);
+//     function sum(){
+//         console.log(this);
+//         return a+b;
+//     }
+//     console.log(sum());
+// }
+// showThis(5,6);
+
+// const obj = {
+//     a:20,
+//     b:15,
+//     sum: function(){
+//         console.log(this);
+//         function shout(){
+//             console.log(this);
+//         }
+//         shout();
+//     }
+// };
+// obj.sum();
+
+// function User(name, id){
+//     this.name = name;
+//     this.id = id;
+//     this.human = true;
+//     this.hello = function() {
+//         console.log(`Hello ${this.name}`);
+//     };
+// }
+// let ivan = new User('Ivan', 23);
+
+// function sayName(surname) {
+//     console.log(this);
+//     console.log(this.name + surname);
+// }
+// const user = {
+//     name: 'John'
+// };
+// sayName.call(user, 'Smith');
+// sayName.apply(user, ['Smith']);
+
+// function count(num){
+//     return this*num;
+// }
+// const double = count.bind(2);
+// console.log(double(3));
+
+const btn = document.querySelector('button');
+btn.addEventListener('click', () => {
+    console.log(this);
+});
+
+const obj = {
+num:5,
+sayNumber: function(){
+    const say = () => {
+        console.log(this);
+    }
 }
+};
+
+const double = a =>  a*2 ; */
+
+class Rectangle {
+    constructor(height, width) {
+      this.height = height;
+      this.width = width;
+    }
+    calcArea(){
+        return this.height* this.width;
+    }
+}
+class ColoredRectangleWithText extends Rectangle {
+constructor(height,width,text, bgColor){
+ super(height,width);//всегда на 1 месте
+ this.text = text;
+this.bgColor = bgColor;
+}
+showMyProps(){
+    console.log(`Текст : ${this.text}, color ${this.bgColor}`);
+}
+}
+const square = new Rectangle(44,33);
+console.log(square.calcArea());
+
+const div = new ColoredRectangleWithText(25,10,'Help', 'red');
+console.log(div.calcArea());

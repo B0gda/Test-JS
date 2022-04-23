@@ -45,7 +45,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         if (t > 0) {
             days = Math.floor(t / (1000 * 60 * 60 * 24)), //округление до ближайшего целого
-                hours = Math.floor((t / (1000 * 60 * 60) % 24)) - 2,
+                hours = Math.floor((t / (1000 * 60 * 60) % 24)),
                 minutes = Math.floor((t / (1000 * 60)) % 60),
                 seconds = Math.floor((t / 1000) % 60);
         }else{

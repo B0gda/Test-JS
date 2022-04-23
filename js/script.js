@@ -1060,7 +1060,10 @@ sayNumber: function(){
 
 const double = a =>  a*2 ; */
 
-class Rectangle {
+
+
+///Class
+/* class Rectangle {
     constructor(height, width) {
       this.height = height;
       this.width = width;
@@ -1083,4 +1086,17 @@ const square = new Rectangle(44,33);
 console.log(square.calcArea());
 
 const div = new ColoredRectangleWithText(25,10,'Help', 'red');
-console.log(div.calcArea());
+console.log(div.calcArea()); */
+
+
+///Rest
+const log = function(a,b, ...rest) {
+console.log(a,b,rest);
+};
+log(1,2,3,4,'wrs',343,34534);
+
+function calrOrDouble(number,basis =2){
+   // basis = basis || 2;//проверка по умлочанию
+    console.log(number * basis);
+}
+calrOrDouble();

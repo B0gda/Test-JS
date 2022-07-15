@@ -1090,7 +1090,7 @@ console.log(div.calcArea()); */
 
 
 ///Rest
-const log = function(a,b, ...rest) {
+/*const log = function(a,b, ...rest) {
 console.log(a,b,rest);
 };
 log(1,2,3,4,'wrs',343,34534);
@@ -1099,4 +1099,32 @@ function calrOrDouble(number,basis =2){
    // basis = basis || 2;//проверка по умлочанию
     console.log(number * basis);
 }
-calrOrDouble();
+calrOrDouble();*/
+
+//Оператор нулевого слияния
+
+// const box = document.querySelector('.box2');
+
+// const newHeight = 100;
+// const newWidth = 400;
+
+// function changeParams(elem, h, w) {
+//     elem.style.height = `${h ?? 200}px`;
+//     elem.style.width = `${w ?? 200}px`;
+// }
+
+// changeParams(box, newHeight, newWidth);
+
+// let userName;
+ 
+// console.log(userName ?? 'User');//пропускает null и underfined
+
+// //приоритет между && и ||
+// //смешивать Nullih c && нельзя!
+// // только с ES11
+
+//Оператор опциональной цепочи
+const box = document.querySelector('.box2');
+const block = document.querySelector('.block');
+
+console.log(block)
